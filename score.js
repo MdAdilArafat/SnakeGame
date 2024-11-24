@@ -5,7 +5,7 @@ let points =1;
 
 function pointIncease(){
     score.innerHTML = points
-    if(points == 1){
+    if(points == 5){
        final.innerHTML = " YOU WIN"
        background(255,0,0);
        noLoop();

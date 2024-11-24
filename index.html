@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js" integrity="sha512-S+9EbrqLIvdeMVI0d4xfxeNpetEDxRTbmdj2fdb4o63bDUQ5wIB8juD75SVzhKSNYlcuFLdWTS56G/qBh9IbGA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-<body>
-     
+<body class="flex justify-around py-10">
+     <div class="score">
+        <h1 class="text-xl leading-9 text-zinc-950 font-bold ">SCOREBOARD</h1>
+        <div class="points flex items-center justify-start">
+            <p class="text-xl text-zinc-800 leading-10">Points : </p>
+            <h1 id="score" class="text-xl"> 0</h1>
+        </div>
 
-
+        <div class="final relative">
+            <h1 id="final" class="text-7xl font-medium leading-7 text-red-700 mt-[80%]"> </h1>
+        </div>
+     </div>
+      
+     <script src="score.js"></script>
     <script src="snack.js"></script>
     <script src="sketch.js"></script>
 </body>

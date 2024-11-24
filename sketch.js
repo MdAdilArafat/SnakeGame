@@ -4,7 +4,8 @@ let food;
 let w;
 let h;
 function setup(){
-   createCanvas(400,400); 
+   let cnv = createCanvas(400,400); 
+//    cnv.position(80%,10%)
    w = floor(width/ rez);
    h = floor(height/ rez);
    frameRate(2);
@@ -39,6 +40,7 @@ function keyPressed(){
 
 
 function draw(){
+
     scale(rez)
     background(220);
     if (snake1.eat(food)){
@@ -46,6 +48,7 @@ function draw(){
     }
     snake1.update();
     snake1.show();
+    
 
     if (snake1.endGame()) {
         background(255,0,0);

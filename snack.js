@@ -26,6 +26,7 @@ class snake{
         let head = this.body[this.body.length-1].copy();
         this.len++;
         this.body.push(head);
+        pointIncease();
     }
 
     endGame(){
@@ -34,13 +35,14 @@ class snake{
 
         if(x > w-1 || x < 0 || y > h-1 || y <0 ){
          
-            
+            failed()
             return true;
         }
 
         for (let i = 0; i < this.body.length-1; i++) {
             let part = this.body[i];
             if( part.x == x && part.y == y){
+                failed()
                 return true;
             } 
         }
